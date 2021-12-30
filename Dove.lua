@@ -3659,7 +3659,17 @@ if text == "حساب العمر" or text == "↫ حساب العمر ⌔" then  
 if text == "الحمايه" or text == "↫ الحمايه ⌔" then  Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔︰ اضف البوت في المجموعه ثم قم برفعه مشرف وارسل تفعيل \n⌔︰ وتمتع بخدمات غير موجوده في باقي البوتات ', 1, 'md') end
 if text == "الزخرفه" or text == "↫ الزخرفه ⌔" then  Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔︰قم بأرسال أمر زخرفه وثم ارسال الاسم الذي تريد زخرفته بألانكليزي أو العربي', 1, 'md') end
 if text == "اهمس" and ChCheck(msg) or text == "↫ بوت الهمسه ⌔" and ChCheck(msg) or text == "بوت الهمسه" and ChCheck(msg) or text == "همسه" and ChCheck(msg) or text == "اريد بوت الهمسه" and ChCheck(msg) or text == "دزلي بوت الهمسه" and ChCheck(msg) or text == "دزولي بوت الهمسه" and ChCheck(msg) then  Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔︰@F5EEBot ', 1, 'md') end
-if text == "رابط الحذف" and ChCheck(msg) or text == "ححذف" and ChCheck(msg) or text == "↫ بوت الحذف ⌔" and ChCheck(msg) or text == "بوت الحذف" and ChCheck(msg) or text == "اريد بوت الحذف" and ChCheck(msg) or text == "شمرلي بوت الحذف" and ChCheck(msg) or text == "رابط حذف" and ChCheck(msg) then local inline = {{{text="‹ اضغط هنا ›",url="https://t.me/R3J3BOT"}}} SendInline(msg.chat_id_,'*⌔︰اضغط للحصول على بوت الحذف*',nil,inline,msg.id_/2097152/0.5) return false end
+if text == "رابط الحذف" and ChCheck(msg) or text == "ححذف" and ChCheck(msg) or text == "↫ بوت الحذف ⌔" and ChCheck(msg) or text == "بوت الحذف" and ChCheck(msg) or text == "اريد بوت الحذف" and ChCheck(msg) or text == "شمرلي بوت الحذف" and ChCheck(msg) or text == "رابط حذف" and ChCheck(msg) or text == "↫ بوت الحذف ⌔" and ChCheck(msg) or text == "بوت الحذف" and ChCheck(msg) or text == "اريد بوت الحذف" and ChCheck(msg) or text == "اريد بوت حذف" and ChCheck(msg) or text == "بوت حذف" and ChCheck(msg) or text == "بوت حذف حسابات" and ChCheck(msg) or text == "راح احذف" and ChCheck(msg) then
+Text = [[⌔︰Hello buttons at the bottom to delete social media accounts .]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⌔ Delete bot',url="https://t.me/R3J3BOT"}},
+{{text = '⌔ Delete face',url="https://www.facebook.com/help/deleteaccount"},{text = '⌔ Delete insta',url="https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent"}},{{text= '⌔ Dove Source',url="https://t.me/EEPEF"}}
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/R3J3BOT&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
 if text == "معاني الاسماء" or text == "↫ معاني الاسماء ⌔" then  Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔︰ من خلال البوت يمكنك معرفه معنى اسمك \n⌔︰ فقط قم بارسال امر معنى اسم + الاسم \n⌔︰ مثال : معنى اسم ريو', 1, 'md') end
 if text == "عدد المسح" or text == "تعين عدد المسح" or text == "تعيين عدد المسح" then  Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔︰ فقط قم بارسال امر عدد المسح + عدد المسح \n⌔︰ مثال : عدد المسح 100', 1, 'md') end
 if text == "انطق" then  Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔︰ فقط قم بارسال امر انطق + الكلمه\n⌔︰سيقوم البوت بنطق الكلمه \n⌔︰ مثال : انطق هلو', 1, 'md') end
