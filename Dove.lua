@@ -12799,7 +12799,7 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?cha
 end
 --     Dove Source     --
 if Manager(msg) then
-if text == "قفل" or text == "القفل" or text == "قفل" or text == "فتح" or text == "اوامر القفل" or text == "اوامر القفل" or text == "اوامر الفتح و القفل" then
+if text == "اوامر القفل" or text == "اوامر القفل" or text == "اوامر الفتح و القفل" then
 local locklist = DevRio:get(Dove..'Rio:locklist')
 local Text = [[
 ⌔︰اهلا بك في قائمة القفل والفتح ↫ ⤈ 
